@@ -1,25 +1,39 @@
-import logo from './logo.svg';
-import './App.css';
+import React, {useState} from "react"
+import LoginForm from "./components/LoginForm/LoginForm"
+import "./App.css"
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const [user, setUser] = useState(null);
+    const [isLoginVisible, setIsLoginVisible] = useState(false);
+
+    function handleLogin(loggedInUser) {
+        setUser(loggedInUser)
+        setIsLoginVisible(false) // close the login form after login
+    }
+
+    function toggleLoginForm() {
+        setIsLoginVisible(!isLoginVisible);
+    }
+
+  
+
+    return (
+        <div className="app">
+            {user ? (
+                <div>Welcome, {user.name}!</div>
+            ) : (
+              <button onClick={toggleLoginForm}>Login</button>
+            )}
+           {isLoginVisible && (
+            <div className="login-overlay">
+                <div className="login-modal">
+                    <button className="close-button" onClick={toggleLoginForm}>x</button>
+                    <LoginForm onLogin={handleLogin} />
+                </div>
+            </div>
+           )}
+        </div>
+    )
 }
 
-export default App;
+export default App
