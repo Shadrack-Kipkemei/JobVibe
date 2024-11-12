@@ -1,6 +1,7 @@
 .app {
     text-align: center;
     padding: 2rem;
+    background-image: url(../public/background.png);
   }
   
   button {
@@ -10,13 +11,14 @@
     padding: 0.5rem 1rem;
     border-radius: 4px;
     cursor: pointer;
+    margin: 0.5rem;
   }
   
   button:hover {
     background-color: #0056b3;
   }
   
-  .login-overlay {
+  .overlay {
     position: fixed;
     top: 0;
     left: 0;
@@ -28,7 +30,7 @@
     align-items: center;
   }
   
-  .login-modal {
+  .modal {
     background: white;
     padding: 2rem;
     border-radius: 8px;
