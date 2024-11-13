@@ -56,6 +56,32 @@
         "appliedJobs": [],
         "savedJobs": []
       }
+    },
+    {
+      "id": "ff9a",
+      "name": "Dan Ian",
+      "email": "danian@gmail.com",
+      "password": "100bags",
+      "profile": {
+        "location": "",
+        "skills": [],
+        "experience": "",
+        "appliedJobs": [],
+        "savedJobs": []
+      }
+    },
+    {
+      "id": "30fb",
+      "name": "Faith Joy",
+      "email": "faithjoy@gmail.com",
+      "password": "100bags",
+      "profile": {
+        "location": "",
+        "skills": [],
+        "experience": "",
+        "appliedJobs": [],
+        "savedJobs": []
+      }
     }
   ],
   "companies": [

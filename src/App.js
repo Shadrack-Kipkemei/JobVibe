@@ -31,7 +31,7 @@ function App() {
     return (
         <div className="app">
             {user ? (
-                <div>Welcome, {user.name}!</div>
+                <div id="message">Welcome, {user.name}!</div>
             ) : (
                 <div>
               <button onClick={toggleLoginForm}>Login</button>
@@ -39,8 +39,8 @@ function App() {
               </div>
             )}
            {isLoginVisible && (
-            <div className="login-overlay">
-                <div className="login-modal">
+            <div className="overlay">
+                <div className="modal">
                     <button className="close-button" onClick={toggleLoginForm}>x</button>
                     <LoginForm onLogin={handleLogin} />
                 </div>
