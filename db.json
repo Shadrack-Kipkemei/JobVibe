@@ -103,22 +103,6 @@
         "status": "applied",
         "appliedDate": "2024-11-12"
       }
-    ],
-    "notifications": [
-      {
-        "id": 1,
-        "userId": 1,
-        "message": "You have a new job application status update.",
-        "read": false,
-        "date": "2024-11-06"
-      },
-      {
-        "id": 2,
-        "userId": 2,
-        "message": "New job posted: Data Scientist at HealthPlus.",
-        "read": true,
-        "date": "2024-11-11"
-      }
     ]
   }
   
