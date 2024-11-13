@@ -1,38 +1,345 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f9fafb;
+  color: #333;
+  line-height: 1.6;
+  padding: 0;
+}
+
+
 .App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  text-align: center;
+  background-color: #ffdd57;
+
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+
+.navbar {
+  background-color: #1e2a47;
+  color: #fff;
+  padding: 15px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  justify-content: space-evenly;
+  
+}
+
+.navbar .logo {
+  font-size: 1.8em;
+  font-weight: 600;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  justify-content: space-evenly;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  justify-content: space-evenly;
+}
+
+.navbar ul li {
+  font-size: 1.1em;
+  justify-content: space-evenly;
+}
+
+.navbar ul li a {
+  color: #fff;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  justify-content: space-evenly;
+}
+
+.navbar ul li a:hover {
+  color: #ff8c00;
+}
+
+.navbar .menu-toggle {
+  display: none;
+  font-size: 2em;
+  color: #fff;
+  cursor: pointer;
+  justify-content: space-evenly;
+}
+
+@media (max-width: 768px) {
+  .navbar ul {
+    display: none;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: space-evenly;
+
+  }
+
+  .navbar .menu-toggle {
+    display: block;
+    justify-content: space-evenly;
+  }
+
+  .navbar.open ul {
+    display: flex;
+    justify-content: space-evenly;
+  }
+}
+
+.home {
+  text-align: center;
+  padding: 80px 20px;
+  background: linear-gradient(135deg, #ff8c00, #ffdd57);
+  color: #fff;
+  
+}
+
+.home h1 {
+  font-size: 4em;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.home p {
+  font-size: 1.2em;
+  margin-bottom: 40px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.home .cta-btn {
+  padding: 15px 30px;
+  background-color: #fff;
+  color: #1e2a47;
+  border: none;
+  border-radius: 50px;
+  font-size: 1.2em;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.home .cta-btn:hover {
+  background-color: #ffdd57;
+  transform: translateY(-5px);
+}
+
+.about {
+  background-color: #fff;
+  padding: 80px 20px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.about h2 {
+  font-size: 2.5em;
+  margin-bottom: 30px;
+  color: #333;
+  font-weight: 600;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.about p {
+  font-size: 1.1em;
+  color: #555;
+  line-height: 1.8;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.contact {
+  padding: 60px 20px;
+  background-color: #f4f7fc;
+  text-align: center;
+}
+
+.contact h2 {
+  font-size: 2.5em;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+.contact-form {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 15px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1.1em;
+  width: 100%;
+}
+
+.contact-form button {
+  padding: 15px 30px;
+  background-color: #ff8c00;
   color: white;
+  border: none;
+  border-radius: 50px;
+  font-size: 1.2em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-.App-link {
-  color: #61dafb;
+.contact-form button:hover {
+  background-color: #e17c00;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+
+.jobs {
+  padding: 80px 20px;
+  background-color: #fff;
+  text-align: center;
+}
+
+.job-card {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+  transition: all 0.3s ease;
+}
+
+.job-card:hover {
+  transform: translateY(-10px);
+}
+
+.job-card h3 {
+  font-size: 2em;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.job-card p {
+  font-size: 1.1em;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.job-card .apply-btn {
+  padding: 12px 25px;
+  background-color: #ff8c00;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 1.1em;
+  transition: background-color 0.3s ease;
+}
+
+.job-card .apply-btn:hover {
+  background-color: #e17c00;
+}
+
+
+.form-container {
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.form-container h2 {
+  font-size: 2.5em;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+.form-container input,
+.form-container button {
+  width: 100%;
+  padding: 15px;
+  margin: 12px 0;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1.1em;
+}
+
+.form-container button {
+  background-color: #ff8c00;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.form-container button:hover {
+  background-color: #e17c00;
+}
+
+
+@media (max-width: 768px) {
+  .navbar ul {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    
   }
-  to {
-    transform: rotate(360deg);
+
+  .navbar .menu-toggle {
+    display: block;
+  }
+
+  .navbar.open ul {
+    display: flex;
+  }
+
+  .home h1 {
+    font-size: 2.8em;
+  }
+
+  .home p {
+    font-size: 1em;
+  }
+
+  .cta-btn {
+    padding: 12px 25px;
+  }
+
+  .about p {
+    font-size: 1em;
+    max-width: 100%;
+  }
+
+  .contact-form {
+    width: 100%;
+    padding: 0;
+  }
+
+  .job-card {
+    margin-bottom: 20px;
+  }
+
+  .form-container {
+    padding: 20px;
+  }
+
+  .form-container h2 {
+    font-size: 2em;
   }
 }
