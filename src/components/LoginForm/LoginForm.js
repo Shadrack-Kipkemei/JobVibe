@@ -1,5 +1,6 @@
+// src/components/LoginForm/LoginForm.js
 import React, { useState } from "react";
-// import styles from "./Login.module.css";
+import Styles from "./LoginForm.module.css"; // Import the CSS module
 
 function LoginForm({ onLogin }) {
   const [email, setEmail] = useState("");
@@ -41,9 +42,9 @@ function LoginForm({ onLogin }) {
   }
 
   return (
-    <form className="login-form" onSubmit={handleSubmit}>
+    <form className={Styles["login-form"]} onSubmit={handleSubmit}>
       <h2>Login</h2>
-      {error && <p className="error">{error}</p>}
+      {error && <p className={Styles.error}>{error}</p>}
       <input
         type="email"
         name="email"
@@ -64,8 +65,3 @@ function LoginForm({ onLogin }) {
 }
 
 export default LoginForm;
-
-
-
-
-
