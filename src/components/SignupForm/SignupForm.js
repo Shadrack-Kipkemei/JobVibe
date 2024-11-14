@@ -1,6 +1,5 @@
-// src/components/SignupForm/SignupForm.js
 import React, { useState } from "react";
-import styles from "./SignupForm.module.css"; // Import the CSS module
+import styles from "./SignupForm.module.css"; 
 
 function SignupForm({ onSignup }) {
   const [name, setName] = useState("");

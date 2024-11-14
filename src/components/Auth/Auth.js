@@ -1,8 +1,7 @@
-// src/components/Auth.js
 import React, { useState } from "react";
 import LoginForm from "../LoginForm/LoginForm";
 import SignupForm from "../SignupForm/SignupForm";
-import Styles from "./Auth.module.css"; // Import the CSS module
+import Styles from "./Auth.module.css"; 
 
 function Auth() {
   const [user, setUser] = useState(null); // State to track the logged-in user

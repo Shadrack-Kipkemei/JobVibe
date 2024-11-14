@@ -1,6 +1,5 @@
-// src/components/LoginForm/LoginForm.js
 import React, { useState } from "react";
-import Styles from "./LoginForm.module.css"; // Import the CSS module
+import Styles from "./LoginForm.module.css"; 
 
 function LoginForm({ onLogin }) {
   const [email, setEmail] = useState("");
