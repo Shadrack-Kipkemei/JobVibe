@@ -39,16 +39,16 @@ function App() {
               </div>
             )}
            {isLoginVisible && (
-            <div className="overlay">
-                <div className="modal">
+            <div className="custom-overlay">
+                <div className="custom-modal">
                     <button className="close-button" onClick={toggleLoginForm}>x</button>
                     <LoginForm onLogin={handleLogin} />
                 </div>
             </div>
            )}
            {isSignupVisible && (
-            <div className="overlay">
-                <div className="modal">
+            <div className="custom-overlay">
+                <div className="custom-modal">
                     <button className="close-button" onClick={toggleSignupForm}>x</button>
                     <SignupForm onSignup={handleSignup}/>
                 </div>

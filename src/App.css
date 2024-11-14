@@ -24,7 +24,7 @@
     background-color: #0056b3;
   }
   
-  .overlay {
+  .custom-overlay {
     position: fixed;
     top: 0;
     left: 0;
@@ -36,7 +36,7 @@
     align-items: center;
   }
   
-  .modal {
+  .custom-modal {
     background: white;
     padding: 2rem;
     border-radius: 8px;
