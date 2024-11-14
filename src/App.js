@@ -68,6 +68,8 @@ function App() {
         onSignupClick={toggleSignupForm} 
         onJobsClick={toggleJobs}  // Pass toggleJobs function to Navbar
       />
+       <Home />
+       <About />
       
       {/* Conditionally render Login or Signup form */}
       {showLoginForm && <LoginForm onLogin={handleLogin} />}
@@ -83,8 +85,8 @@ function App() {
       />}
       
       {/* Render other sections */}
-      <Home />
-      <About />
+     
+      
       <Contact />
     </div>
   );

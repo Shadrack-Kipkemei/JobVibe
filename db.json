@@ -121,6 +121,32 @@
         "appliedJobs": [],
         "savedJobs": []
       }
+    },
+    {
+      "id": "2911",
+      "name": "John Doe",
+      "email": "johndoe@gmail.com",
+      "password": "100bags",
+      "profile": {
+        "location": "",
+        "skills": [],
+        "experience": "",
+        "appliedJobs": [],
+        "savedJobs": []
+      }
+    },
+    {
+      "id": "2dfb",
+      "name": "Emily",
+      "email": "emily@gmail.com",
+      "password": "100bags",
+      "profile": {
+        "location": "",
+        "skills": [],
+        "experience": "",
+        "appliedJobs": [],
+        "savedJobs": []
+      }
     }
   ],
   "companies": [
@@ -517,6 +543,27 @@
       "jobId": "3",
       "status": "applied",
       "appliedDate": "2024-11-14T22:41:45.555Z"
+    },
+    {
+      "id": "32ad",
+      "userId": "1",
+      "jobId": "1",
+      "status": "applied",
+      "appliedDate": "2024-11-14T23:31:59.621Z"
+    },
+    {
+      "id": "4b69",
+      "userId": "1",
+      "jobId": "1",
+      "status": "applied",
+      "appliedDate": "2024-11-14T23:41:33.447Z"
+    },
+    {
+      "id": "f0e3",
+      "userId": "1",
+      "jobId": "1",
+      "status": "applied",
+      "appliedDate": "2024-11-14T23:46:30.695Z"
     }
   ]
 }

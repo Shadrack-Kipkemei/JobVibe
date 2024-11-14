@@ -16,7 +16,7 @@ const Navbar = ({ onLoginClick, onSignupClick, onJobsClick }) => {
         <li><a href="#about">About</a></li> 
         <li><a href="#contact">Contact</a></li> 
         <li><a href="#jobs" onClick={onJobsClick}>Jobs</a></li>  {/* Add Jobs button */}
-        <li><a href="#signup">Sign Up</a></li> 
+        {/* <li><a href="#signup">Sign Up</a></li>  */}
         
         {/* Button to toggle Login Form */}
         <li>

@@ -15,7 +15,7 @@
   
   .navbar .logo {
     font-size: 1.8em;
-    color: #fff;
+    color: aqua;
     font-weight: 600;
   }
   
@@ -31,7 +31,7 @@
   
   .navbar .nav-links li a,
   .navbar .nav-links li button {
-    color: #fff;
+    color: aqua;
     text-decoration: none;
     font-weight: 500;
     cursor: pointer;
@@ -42,7 +42,7 @@
   
   .navbar .nav-links li a:hover,
   .navbar .nav-links li button:hover {
-    color: #ff8c00;
+    color: #45B1E8;
   }
   
   .navbar .menu-toggle {

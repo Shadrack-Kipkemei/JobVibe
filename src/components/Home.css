@@ -7,9 +7,9 @@
  background-position: center;
  background-size: cover;
  height: 100vh;
-  color: white;
+  color: aqua;
   font-family: "Urbanist", sans-serif;
-  min-height: 100vh; /* Ensure the section takes at least the full height of the viewport */
+  min-height: 100vh; 
 }
 
 .home h1 {
@@ -29,8 +29,8 @@
 .home .cta-button {
   margin-top: 30px;
   padding: 15px 30px;
-  background-color: #28a745;
-  color: white;
+  background-color: aqua;
+  color: aqua;
   border: none;
   border-radius: 5px;
   font-size: 1.2rem;
@@ -55,4 +55,10 @@
     font-size: 1rem;
     padding: 12px 25px;
   }
+
+}
+
+img {
+  border-radius: 30px;
+  border: 2px solid aqua;
 }
