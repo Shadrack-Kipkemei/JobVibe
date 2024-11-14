@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import styles from "./SignupForm.module.css"; 
+import styles from "./SignupForm.module.css";
 
 function SignupForm({ onSignup }) {
   const [name, setName] = useState("");
@@ -54,7 +54,9 @@ function SignupForm({ onSignup }) {
             body: JSON.stringify(newUser),
           })
             .then((r) => r.json())
-            .then((data) => onSignup(data))
+            .then((data) => {
+              onSignup(data);  // Pass the new user to the parent (App.js)
+            })
             .catch((error) => {
               console.error("Error creating user:", error);
               setError("Something went wrong. Please try again.");
@@ -98,4 +100,3 @@ function SignupForm({ onSignup }) {
 }
 
 export default SignupForm;
-

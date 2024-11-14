@@ -56,6 +56,71 @@
         "appliedJobs": [],
         "savedJobs": []
       }
+    },
+    {
+      "id": "30f6",
+      "name": "dan",
+      "email": "dan@gmail.com",
+      "password": "100bags",
+      "profile": {
+        "location": "",
+        "skills": [],
+        "experience": "",
+        "appliedJobs": [],
+        "savedJobs": []
+      }
+    },
+    {
+      "id": "0aa3",
+      "name": "Whale",
+      "email": "whale@gmail.com",
+      "password": "100bags",
+      "profile": {
+        "location": "",
+        "skills": [],
+        "experience": "",
+        "appliedJobs": [],
+        "savedJobs": []
+      }
+    },
+    {
+      "id": "db17",
+      "name": "Riggy G",
+      "email": "riggy@gmail.com",
+      "password": "100bags",
+      "profile": {
+        "location": "",
+        "skills": [],
+        "experience": "",
+        "appliedJobs": [],
+        "savedJobs": []
+      }
+    },
+    {
+      "id": "8aa5",
+      "name": "Jane Doe",
+      "email": "jandoe@gmail.com",
+      "password": "100bags",
+      "profile": {
+        "location": "",
+        "skills": [],
+        "experience": "",
+        "appliedJobs": [],
+        "savedJobs": []
+      }
+    },
+    {
+      "id": "5977",
+      "name": "Jeremy Mayunge",
+      "email": "jeremy@gmail.com",
+      "password": "100bags",
+      "profile": {
+        "location": "",
+        "skills": [],
+        "experience": "",
+        "appliedJobs": [],
+        "savedJobs": []
+      }
     }
   ],
   "companies": [
@@ -431,6 +496,27 @@
       "jobId": 3,
       "status": "applied",
       "appliedDate": "2024-11-12"
+    },
+    {
+      "id": "df05",
+      "userId": "1",
+      "jobId": "1",
+      "status": "applied",
+      "appliedDate": "2024-11-14T22:35:10.744Z"
+    },
+    {
+      "id": "418c",
+      "userId": "8aa5",
+      "jobId": "2",
+      "status": "applied",
+      "appliedDate": "2024-11-14T22:37:21.282Z"
+    },
+    {
+      "id": "afeb",
+      "userId": "5977",
+      "jobId": "3",
+      "status": "applied",
+      "appliedDate": "2024-11-14T22:41:45.555Z"
     }
   ]
 }

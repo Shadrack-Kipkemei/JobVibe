@@ -1,82 +1,64 @@
 import React, { useState, useEffect } from 'react';
-import './jobs.css';  // Ensure the CSS is correctly imported
+import './jobs.css';
 
-const Jobs = () => {
-  const [jobs, setJobs] = useState([]);
-  const [filteredJobs, setFilteredJobs] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
+const Jobs = ({ loggedInUser, users, jobs, setUsers, setJobs }) => {
+  const [filteredJobs, setFilteredJobs] = useState(jobs);  // Set the filtered jobs
   const [searchQuery, setSearchQuery] = useState('');
-  const [users, setUsers] = useState([]);  // State to store users data
-  const [currentUser, setCurrentUser] = useState(null); // Placeholder for logged-in user
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(null);
 
-  // Simulate logged-in user; replace with actual user context or authentication logic
-  const loggedInUser = currentUser; // This would be fetched dynamically from a context or login state
-
-  // Fetch jobs, users, and other data on mount
   useEffect(() => {
-    const fetchData = async () => {
-      try {
-        // Fetch data from the provided endpoints
-        const jobsResponse = await fetch('http://localhost:3000/jobs');
-        const jobsData = await jobsResponse.json();
+    // If there’s a search query, filter jobs based on title, company name, location, or description
+    if (searchQuery !== '') {
+      const filtered = jobs.filter((job) =>
+        job.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        job.companyName.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        job.location.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        job.description.toLowerCase().includes(searchQuery.toLowerCase())
+      );
+      setFilteredJobs(filtered);
+    } else {
+      setFilteredJobs(jobs);  // If no search query, display all jobs
+    }
+  }, [searchQuery, jobs]);
 
-        const usersResponse = await fetch('http://localhost:3000/users');
-        const usersData = await usersResponse.json();
-
-        // Assuming jobs data also needs users data or applied jobs info
-        setJobs(jobsData);
-        setFilteredJobs(jobsData); // Set filtered jobs initially to all jobs
-        setUsers(usersData);  // Set users data
-        setLoading(false);
-      } catch (err) {
-        setError(err.message);
-        setLoading(false);
-      }
-    };
-    fetchData();
-  }, []);  // Empty dependency array means this effect runs only once when the component mounts
-
-  // Function to handle search input change
+  // Handle search input change
   const handleSearchChange = (e) => {
-    const query = e.target.value;
-    setSearchQuery(query);
-
-    const filtered = jobs.filter((job) =>
-      job.title.toLowerCase().includes(query.toLowerCase()) ||
-      job.companyName.toLowerCase().includes(query.toLowerCase()) ||
-      job.location.toLowerCase().includes(query.toLowerCase()) ||
-      job.description.toLowerCase().includes(query.toLowerCase())
-    );
-    setFilteredJobs(filtered);
+    setSearchQuery(e.target.value);
   };
 
-  // Function to handle applying for a job
+  // Handle job application
   const handleApply = async (jobId) => {
     if (!loggedInUser) {
       alert('You must be logged in to apply for a job.');
       return;
     }
 
-    // Find the logged-in user
-    const user = users.find((u) => u.id === loggedInUser);
+    // Find the user who is logged in
+    const user = users.find((u) => u.id === loggedInUser.id);
+    if (!user) {
+      alert('User not found');
+      return;
+    }
+
+    // Check if the user has already applied for the job
     if (user.profile.appliedJobs.includes(jobId)) {
-      alert('You have already applied to this job.');
+      alert('You have already applied for this job.');
       return;
     }
 
     // Update the user's applied jobs list (locally)
-    const updatedUsers = users.map((user) => {
-      if (user.id === loggedInUser) {
+    const updatedUsers = users.map((u) => {
+      if (u.id === loggedInUser.id) {
         return {
-          ...user,
+          ...u,
           profile: {
-            ...user.profile,
-            appliedJobs: [...user.profile.appliedJobs, jobId],
+            ...u.profile,
+            appliedJobs: [...u.profile.appliedJobs, jobId],
           },
         };
       }
-      return user;
+      return u;
     });
 
     // Update the job's applications list (locally)
@@ -84,22 +66,22 @@ const Jobs = () => {
       if (job.id === jobId) {
         return {
           ...job,
-          applications: [...job.applications, loggedInUser], // Add user to the job's applications
+          applications: [...job.applications, loggedInUser.id], // Add the user to the job's applications
         };
       }
       return job;
     });
 
-    // Optionally, you can send the updates to the server (e.g., using POST or PUT request to API)
+    // Optionally, send updates to the server (e.g., via POST or PUT requests)
     try {
-      // Send POST request to apply for the job
+      // Simulate saving the application (use an API call here)
       await fetch('http://localhost:3000/applications', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          userId: loggedInUser,
+          userId: loggedInUser.id,
           jobId: jobId,
           status: 'applied',
           appliedDate: new Date().toISOString(),
@@ -109,17 +91,17 @@ const Jobs = () => {
       // Update the state with the new data
       setUsers(updatedUsers);
       setJobs(updatedJobs);
+      alert('You have successfully applied for the job!');
     } catch (error) {
       console.error('Failed to apply for job:', error);
+      alert('There was an error applying for the job.');
     }
   };
 
   return (
-    <header className="head">
+    <header className="head" id="jobs">
       <div id="bar">
         <div className="container-fluid">
-          {/* <a className="navbar-brand">Jobvibe</a>
-          <a className="navbar-brand">Home</a> */}
           <form className="d-flex">
             <input
               className="form-control me-2"
@@ -161,9 +143,9 @@ const Jobs = () => {
                   <button
                     className="btn btn-primary"
                     onClick={() => handleApply(job.id)}
-                    disabled={job.applications.includes(loggedInUser)}  // Disable if already applied
+                    disabled={job.applications.includes(loggedInUser?.id)}  // Disable if already applied
                   >
-                    {job.applications.includes(loggedInUser) ? 'Applied' : 'Apply'}
+                    {job.applications.includes(loggedInUser?.id) ? 'Applied' : 'Apply'}
                   </button>
                 </li>
               ))}
