@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+
+.about-section {
+    padding: 50px;
+    background-color: #fff;
+    text-align: center;
+    font-family: "Urbanist", sans-serif;
+  }
+  
+  .about-section h2 {
+    font-size: 36px;
+    color: #333;
+  }
+  
+  .about-section p {
+    font-size: 18px;
+    color: #666;
+  }
+  
