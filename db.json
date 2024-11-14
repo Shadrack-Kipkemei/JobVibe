@@ -1,0 +1,436 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "name": "Ian Junior",
+      "email": "ian.junior@example.com",
+      "password": "100bags",
+      "profile": {
+        "location": "Mombasa, Kenya",
+        "skills": [
+          "JavaScript",
+          "React",
+          "Node.js"
+        ],
+        "experience": "3 years",
+        "appliedJobs": [
+          1,
+          2
+        ],
+        "savedJobs": [
+          3
+        ]
+      }
+    },
+    {
+      "id": "2",
+      "name": "Elvis Mboya",
+      "email": "elvis.mboya@example.com",
+      "password": "100bags",
+      "profile": {
+        "location": "Nairobi, Kenya",
+        "skills": [
+          "Python",
+          "Django",
+          "Machine Learning"
+        ],
+        "experience": "5 years",
+        "appliedJobs": [
+          3
+        ],
+        "savedJobs": [
+          1,
+          2
+        ]
+      }
+    },
+    {
+      "id": "2cd0",
+      "name": "Shadrack Kipkemei",
+      "email": "shadrack.kipkeme@student.moringaschool.com",
+      "password": "100bags",
+      "profile": {
+        "location": "",
+        "skills": [],
+        "experience": "",
+        "appliedJobs": [],
+        "savedJobs": []
+      }
+    }
+  ],
+  "companies": [
+    {
+      "id": "1",
+      "name": "TechCorp",
+      "location": "Mombasa, Kenya",
+      "industry": "Technology",
+      "jobsPosted": [
+        1,
+        2
+      ]
+    },
+    {
+      "id": "2",
+      "name": "HealthPlus",
+      "location": "Nairobi, Kenya",
+      "industry": "Healthcare",
+      "jobsPosted": [
+        3
+      ]
+    },
+    {
+      "id": "3",
+      "name": "EduWorks",
+      "location": "Nairobi, Kenya",
+      "industry": "Education",
+      "jobsPosted": [
+        4,
+        5
+      ]
+    },
+    {
+      "id": "4",
+      "name": "GreenTech",
+      "location": "Mombasa, Kenya",
+      "industry": "Renewable Energy",
+      "jobsPosted": [
+        6,
+        7
+      ]
+    },
+    {
+      "id": "5",
+      "name": "DataXperts",
+      "location": "Nairobi, Kenya",
+      "industry": "Data Analytics",
+      "jobsPosted": [
+        8
+      ]
+    },
+    {
+      "id": "6",
+      "name": "BuildIt",
+      "location": "Nairobi, Kenya",
+      "industry": "Construction",
+      "jobsPosted": [
+        9
+      ]
+    },
+    {
+      "id": "7",
+      "name": "Fintech Solutions",
+      "location": "Mombasa, Kenya",
+      "industry": "Finance",
+      "jobsPosted": [
+        10
+      ]
+    },
+    {
+      "id": "8",
+      "name": "MedicoPlus",
+      "location": "Mombasa, Kenya",
+      "industry": "Healthcare",
+      "jobsPosted": [
+        11
+      ]
+    },
+    {
+      "id": "9",
+      "name": "SmartHome Innovations",
+      "location": "Nairobi, Kenya",
+      "industry": "Technology",
+      "jobsPosted": [
+        12
+      ]
+    },
+    {
+      "id": "10",
+      "name": "LogisticsPro",
+      "location": "Nairobi, Kenya",
+      "industry": "Logistics",
+      "jobsPosted": [
+        13
+      ]
+    },
+    {
+      "id": "11",
+      "name": "TravelHub",
+      "location": "Mombasa, Kenya",
+      "industry": "Travel",
+      "jobsPosted": [
+        14
+      ]
+    }
+  ],
+  "jobs": [
+    {
+      "id": "1",
+      "title": "Frontend Developer",
+      "companyId": 1,
+      "companyName": "TechCorp",
+      "location": "Mombasa, Kenya",
+      "description": "We are looking for a Frontend Developer with experience in React and JavaScript.",
+      "requirements": [
+        "React",
+        "JavaScript",
+        "HTML",
+        "CSS"
+      ],
+      "salary": "$80,000 - $100,000",
+      "postedDate": "2024-11-01",
+      "applications": [
+        1
+      ],
+      "imageUrl": "https://img.freepik.com/free-vector/portrait-programmer-working-with-pc_23-2148216736.jpg?t=st=1731594955~exp=1731598555~hmac=ce072a328703cb043c8382a388b9c16f41e34ac1342e99b5d27d31d8084b11c6&w=740"
+    },
+    {
+      "id": "2",
+      "title": "Backend Developer",
+      "companyId": 1,
+      "companyName": "TechCorp",
+      "location": "Mombasa, Kenya",
+      "description": "We are looking for a Backend Developer with experience in Node.js and Express.",
+      "requirements": [
+        "Node.js",
+        "Express",
+        "MongoDB"
+      ],
+      "salary": "$90,000 - $110,000",
+      "postedDate": "2024-11-05",
+      "applications": [
+        2
+      ],
+      "imageUrl": "https://img.freepik.com/free-vector/organic-flat-computer-programming-illustration_23-2148955255.jpg?t=st=1731595076~exp=1731598676~hmac=d888988b19c9b84100a3b066775cd91eb484cba1d1f6a21abc14178158ab8d73&w=740"
+    },
+    {
+      "id": "3",
+      "title": "Data Scientist",
+      "companyId": 2,
+      "companyName": "HealthPlus",
+      "location": "Nairobi, Kenya",
+      "description": "We are looking for a Data Scientist with experience in Python and Machine Learning.",
+      "requirements": [
+        "Python",
+        "Machine Learning",
+        "Data Analysis"
+      ],
+      "salary": "$100,000 - $120,000",
+      "postedDate": "2024-11-10",
+      "applications": [
+        3
+      ],
+      "imageUrl": "https://img.freepik.com/free-vector/data-processing-concept-illustration_114360-4760.jpg?t=st=1731595197~exp=1731598797~hmac=07c452987cc4269f1f24c9df53953d985684ee9799a1e8d63d09aa2ddbe98069&w=740"
+    },
+    {
+      "id": "4",
+      "title": "Frontend Developer",
+      "companyId": 3,
+      "companyName": "EduWorks",
+      "location": "Nairobi, Kenya",
+      "description": "We are looking for a Frontend Developer with a passion for education technology.",
+      "requirements": [
+        "React",
+        "JavaScript",
+        "CSS",
+        "HTML"
+      ],
+      "salary": "$75,000 - $95,000",
+      "postedDate": "2024-11-03",
+      "applications": [],
+      "imageUrl": "https://img.freepik.com/free-vector/code-typing-concept-illustration_114360-3581.jpg?t=st=1731595417~exp=1731599017~hmac=60304e163e4b141df7972528fae06b67fef7f5a253e6ae2c7a664159e5a22f35&w=740"
+    },
+    {
+      "id": "5",
+      "title": "Backend Developer",
+      "companyId": 3,
+      "companyName": "EduWorks",
+      "location": "Nairobi, Kenya",
+      "description": "We are seeking a Backend Developer with expertise in Node.js for our e-learning platform.",
+      "requirements": [
+        "Node.js",
+        "Express",
+        "MongoDB"
+      ],
+      "salary": "$85,000 - $105,000",
+      "postedDate": "2024-11-07",
+      "applications": [],
+      "imageUrl": "https://img.freepik.com/free-vector/pair-programming-concept-illustration_114360-2170.jpg?t=st=1731595546~exp=1731599146~hmac=f2f85edb5f9cf2f0ac5dcb8fae5905add998a9bf07675704a37fadb3987bb09e&w=740"
+    },
+    {
+      "id": "6",
+      "title": "Renewable Energy Engineer",
+      "companyId": 4,
+      "companyName": "GreenTech",
+      "location": "Mombasa, Kenya",
+      "description": "We are looking for an engineer with experience in renewable energy solutions.",
+      "requirements": [
+        "Renewable Energy",
+        "Electrical Engineering",
+        "Sustainability"
+      ],
+      "salary": "$95,000 - $115,000",
+      "postedDate": "2024-11-09",
+      "applications": [],
+      "imageUrl": "https://img.freepik.com/free-vector/characters-people-holding-green-energy-icons_53876-59870.jpg?t=st=1731595615~exp=1731599215~hmac=fc59618e1eb0da12b77f554b65d5c6d4b5b83c87dd54f38f8dc711332e6e3951&w=740"
+    },
+    {
+      "id": "7",
+      "title": "Project Manager - Green Energy",
+      "companyId": 4,
+      "companyName": "GreenTech",
+      "location": "Mombasa, Kenya",
+      "description": "Seeking a Project Manager with experience in green energy and sustainability.",
+      "requirements": [
+        "Project Management",
+        "Renewable Energy",
+        "Sustainability"
+      ],
+      "salary": "$90,000 - $110,000",
+      "postedDate": "2024-11-11",
+      "applications": [],
+      "imageUrl": "https://img.freepik.com/free-vector/save-world-design-flat-style_24877-60056.jpg?t=st=1731595680~exp=1731599280~hmac=d48fef18f8da91075be800c7f45bb49d5d2d094d1e03ca6dacb618baaceeb84c&w=740"
+    },
+    {
+      "id": "8",
+      "title": "Data Analyst",
+      "companyId": 5,
+      "companyName": "DataXperts",
+      "location": "Nairobi, Kenya",
+      "description": "Looking for a Data Analyst to support our data-driven projects.",
+      "requirements": [
+        "Data Analysis",
+        "Python",
+        "SQL"
+      ],
+      "salary": "$70,000 - $90,000",
+      "postedDate": "2024-11-12",
+      "applications": [],
+      "imageUrl": "https://img.freepik.com/free-vector/dashboard-analytics-computer-performance-evaluation-chart-screen-statistics-analysis-infographic-assessment-business-report-display-vector-isolated-concept-metaphor-illustration_335657-1990.jpg?t=st=1731595742~exp=1731599342~hmac=8b842b2214f6fc8ad38933941c63ed9de0c0b10ae78b54858427fa1524a7be82&w=740"
+    },
+    {
+      "id": "9",
+      "title": "Construction Site Supervisor",
+      "companyId": 6,
+      "companyName": "BuildIt",
+      "location": "Nairobi, Kenya",
+      "description": "Looking for a Site Supervisor for large-scale construction projects.",
+      "requirements": [
+        "Construction",
+        "Project Management",
+        "Site Supervision"
+      ],
+      "salary": "$75,000 - $95,000",
+      "postedDate": "2024-11-14",
+      "applications": [],
+      "imageUrl": "https://img.freepik.com/free-photo/african-american-worker-standing-uniform-wearing-safety-hat-factory_1303-30606.jpg?t=st=1731595971~exp=1731599571~hmac=a564b83b7b7364d2d300218da8e732a7c75197603a99fcc13d6289d92472a5d8&w=740"
+    },
+    {
+      "id": "10",
+      "title": "Financial Analyst",
+      "companyId": 7,
+      "companyName": "Fintech Solutions",
+      "location": "Mombasa, Kenya",
+      "description": "Seeking a Financial Analyst with experience in financial forecasting and reporting.",
+      "requirements": [
+        "Financial Analysis",
+        "Excel",
+        "Accounting"
+      ],
+      "salary": "$80,000 - $100,000",
+      "postedDate": "2024-11-15",
+      "applications": [],
+      "imageUrl": "https://img.freepik.com/free-vector/flat-design-stock-market-concept_23-2149154577.jpg?t=st=1731596066~exp=1731599666~hmac=25a3195872ae3c8ba0b5d015c0eed18455f8289457ea9b9aa67d146196ad2a02&w=740"
+    },
+    {
+      "id": "11",
+      "title": "Healthcare Consultant",
+      "companyId": 8,
+      "companyName": "MedicoPlus",
+      "location": "Mombasa, Kenya",
+      "description": "We are looking for a Healthcare Consultant to help improve healthcare systems.",
+      "requirements": [
+        "Healthcare",
+        "Consulting",
+        "Medical Knowledge"
+      ],
+      "salary": "$85,000 - $105,000",
+      "postedDate": "2024-11-16",
+      "applications": [],
+      "imageUrl": "https://img.freepik.com/free-photo/doctor-working-with-laptop-front-view_23-2149941453.jpg?t=st=1731596524~exp=1731600124~hmac=9cafe1b1c323a844f1afec791a47dd2f37780cebf12764bba44f1768aa5e410d&w=740"
+    },
+    {
+      "id": "12",
+      "title": "IoT Engineer",
+      "companyId": 9,
+      "companyName": "SmartHome Innovations",
+      "location": "Nairobi, Kenya",
+      "description": "Join us as an IoT Engineer to develop smart home technology.",
+      "requirements": [
+        "IoT",
+        "Embedded Systems",
+        "C++"
+      ],
+      "salary": "$95,000 - $115,000",
+      "postedDate": "2024-11-17",
+      "applications": [],
+      "imageUrl": "https://img.freepik.com/free-vector/industry-4-0-concept-illustration_114360-25336.jpg?t=st=1731596683~exp=1731600283~hmac=7a408664f28fe507e929755e66524b5e96e0dd676309d4dcd395ba16a5f56a35&w=740"
+    },
+    {
+      "id": "13",
+      "title": "Logistics Manager",
+      "companyId": 10,
+      "companyName": "LogisticsPro",
+      "location": "Nairobi, Kenya",
+      "description": "We are looking for an experienced Logistics Manager to oversee operations.",
+      "requirements": [
+        "Logistics",
+        "Supply Chain Management",
+        "Project Management"
+      ],
+      "salary": "$80,000 - $100,000",
+      "postedDate": "2024-11-18",
+      "applications": [],
+      "imageUrl": "https://img.freepik.com/free-photo/medium-shot-smiley-man-with-helmet_23-2149426498.jpg?t=st=1731596773~exp=1731600373~hmac=9782530748accae0fd136da701a3e938985804cda8e3318fae5ffaa1e2cfbb8b&w=740"
+    },
+    {
+      "id": "14",
+      "title": "Travel Consultant",
+      "companyId": 11,
+      "companyName": "TravelHub",
+      "location": "Mombasa, Kenya",
+      "description": "Seeking a Travel Consultant to assist clients in planning trips.",
+      "requirements": [
+        "Travel",
+        "Customer Service",
+        "Consulting"
+      ],
+      "salary": "$60,000 - $80,000",
+      "postedDate": "2024-11-19",
+      "applications": [],
+      "imageUrl": "https://img.freepik.com/free-photo/travel-agent-offering-trip-planning-clients_23-2149079444.jpg?t=st=1731596912~exp=1731600512~hmac=3b7259fff984d9bb9916ced2c40a08f01424110bed8243a58e5e3fbbe4734049&w=740"
+    }
+  ],
+  "applications": [
+    {
+      "id": "1",
+      "userId": 1,
+      "jobId": 1,
+      "status": "applied",
+      "appliedDate": "2024-11-05"
+    },
+    {
+      "id": "2",
+      "userId": 1,
+      "jobId": 2,
+      "status": "applied",
+      "appliedDate": "2024-11-08"
+    },
+    {
+      "id": "3",
+      "userId": 2,
+      "jobId": 3,
+      "status": "applied",
+      "appliedDate": "2024-11-12"
+    }
+  ]
+}
