@@ -75,7 +75,7 @@ const Jobs = ({ loggedInUser, users, jobs, setUsers, setJobs }) => {
     // Optionally, send updates to the server (e.g., via POST or PUT requests)
     try {
       // Simulate saving the application (use an API call here)
-      await fetch('http://localhost:3000/applications', {
+      await fetch('https://json-server-template-5ash.onrender.com/applications', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

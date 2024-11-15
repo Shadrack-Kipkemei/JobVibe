@@ -21,7 +21,7 @@ function LoginForm({ onLogin }) {
     console.log("Logging in with:", { email, password });
 
     // Fetch users from the server
-    fetch("http://localhost:3000/users")
+    fetch("https://json-server-template-5ash.onrender.com/users")
       .then((response) => response.json())
       .then((users) => {
         const user = users.find(

@@ -20,11 +20,11 @@ function App() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const jobsResponse = await fetch('http://localhost:3000/jobs');
+        const jobsResponse = await fetch('https://json-server-template-5ash.onrender.com/jobs');
         const jobsData = await jobsResponse.json();
         setJobs(jobsData);
 
-        const usersResponse = await fetch('http://localhost:3000/users');
+        const usersResponse = await fetch('https://json-server-template-5ash.onrender.com/users');
         const usersData = await usersResponse.json();
         setUsers(usersData);
       } catch (error) {

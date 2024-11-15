@@ -37,7 +37,7 @@ function SignupForm({ onSignup }) {
     };
 
     // Check if the email is already taken
-    fetch("http://localhost:3000/users")
+    fetch("https://json-server-template-5ash.onrender.com/users")
       .then((r) => r.json())
       .then((users) => {
         const userExists = users.some((user) => user.email === email);
@@ -46,7 +46,7 @@ function SignupForm({ onSignup }) {
           setError("Email is already taken.");
         } else {
           // Post the new user to the server
-          fetch("http://localhost:3000/users", {
+          fetch("https://json-server-template-5ash.onrender.com/users", {
             method: "POST",
             headers: {
               "Content-Type": "application/json",
