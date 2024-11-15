@@ -1,70 +1,148 @@
-# Getting Started with Create React App
+## JobVibe Website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+JobVibe is a simple authentication system built using React, designed for managing user sign-ups, logins, and job applications for a job board platform. It allows job seekers to create accounts, log in, manage their profiles, and apply for jobs. This project includes sign-up, login, and job application functionalities, as well as mock API integration using JSON Server to simulate backend operations.
 
-## Available Scripts
+## Table of Contents
 
-In the project directory, you can run:
+* Overview
+* Features
+* Technologies Used
+* Setup and Installation
+* Usage
+* API Endpoints
+* Folder Structure
+* Live Version
+* Contributing
+* License
 
-### `npm start`
+## Overview
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+JobVibe is designed as a job board where users (job seekers) can sign up, log in, view job listings, and apply for jobs.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+This project features:
+* User Authentication: Handles user sign-up and login    using email and password.
+* Mock Backend: Uses JSON Server to simulate API requests for storing and retrieving user data.
+* User Profile: Once logged in, users can view a welcome message with their name.
+* Apply for Jobs: Logged-in users can apply for jobs, which will be tracked in their profile.
+* Error Handling: Provides user-friendly error messages for incorrect credentials, duplicate email addresses, or failed job applications.
 
-### `npm test`
+## Use Case
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+JobVibe is ideal for job boards or platforms that require user registration, authentication, and job applications. This system allows users to create accounts, log in, apply for jobs, helping them in their job search journey.
 
-### `npm run build`
+## Features
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+* Sign Up: Users can create a new account by providing their name, email, and password.
+* Login: Existing users can log in using their email and password.
+* User Profiles: Each user has a basic profile that includes their name and email.
+* Apply for Jobs: After logging in, users can apply for jobs and have those applications tracked in their profile.
+* Responsive Forms: Mobile-first approach for both sign-up and login forms.
+* Error Handling: If the email is already in use, the credentials are incorrect, or the job application fails, users will see an error message.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Technlogies Used
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+* React: JavaScript library for building user interfaces.
+* JSON Server: A fake REST API used to simulate a backend for storing user data and job listings.
+* CSS Modules: Scoped CSS for better maintainability and separation of concerns.
+* React Hooks: Using useState and useEffect for managing application state.
 
-### `npm run eject`
+## Setup and Installation
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+To run this project locally, follow these steps:
+# Prerequisites
+* Node.js installed on your machine.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1. Clone the repository
+git clone https://github.com/Shadrack-Kipkemei/JobVibe
+cd jobvibe
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+2. Install dependencies
+npm install
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+3. Set up JSON Server 
+JobVibe uses JSON Server to simulate the backend for user authentication and job applications. You will need to install JSON Server if you don't have it.
 
-## Learn More
+To install it globally, run:
+npm install -g json-server
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+4. Start JSON Server (in a separate terminal)
+json-server --watch db.json
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+5. Start the React App
+Finally, run the React development server:
+npm start
 
-### Code Splitting
+## Usage
+Once the project is up and running, you can interact with it as follows:
+1. Sign Up: Click the "Sign Up" button and enter your name, email, and password to create a new account. If the email is already taken, you'll see an error message.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+2. Login: After signing up, or from the main screen, click the "Login" button. Enter your registered email and password to log in. If the credentials are correct, you'll see a welcome message with your name.
 
-### Analyzing the Bundle Size
+3. Apply for Jobs: Once logged in, you can view a list of available jobs and apply for them. 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+4. Error Messages: If an incorrect email/password combination is entered, or the email is already in use, appropriate error messages will be displayed. Similarly, if there’s an issue with the job application process, users will be notified.
 
-### Making a Progressive Web App
+## API Endpoints
+JobVibe uses a mock API (JSON Server) to simulate backend functionality. The following endpoints are available:
+* GET /users: Fetches the list of all users.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+* POST /users: Creates a new user. The request body should contain the user's name, email, and password.
 
-### Advanced Configuration
+* GET /users/{id}: Retrieves a specific user by ID.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+* PUT /users/{id}: Updates a user's information.
 
-### Deployment
+* GET /jobs: Fetches the list of available jobs.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+* POST /applications: Allows users to apply for jobs. The request body should contain the job ID and user ID.
 
-### `npm run build` fails to minify
+## Folder Structure
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+jobvibe/
+│
+├── public/
+│   ├── index.html           # HTML template
+│   └── favicon.ico          # Favicon
+│
+├── src/
+│   ├── components/          # React components for authentication
+│   │   ├── Auth/            # Auth component with login/signup toggle
+│   │   ├── LoginForm/       # Login form component
+│   │   ├── SignupForm/      # Signup form component
+│   │   ├── JobList/         # Job list and application component
+│   │   └── ...
+│   ├── App.js               # Main React component
+│   ├── index.js             # Entry point for React app
+│   ├── styles/              # CSS Modules for styling
+│   │   ├── Auth.module.css
+│   │   ├── LoginForm.module.css
+│   │   ├── SignupForm.module.css
+│   │   ├── JobList.module.css
+│   │   └── ...
+│   └── ...
+│
+├── db.json                  # Mock data for JSON Server
+├── package.json             # NPM dependencies and scripts
+└── README.md                # Project documentation (this file)
+
+## Live Version
+
+You can view the live version of the JobVibe application at:
+[JobVibe Live](https://job-vibe-shadracks-projects-1e08af63.vercel.app/)
+
+
+## Contributing
+
+We welcome contributions! If you'd like to improve or extend JobVibe, feel free to fork the repository, create a new branch, and submit a pull request.
+
+# Steps to Contribute
+1. Fork the repository.
+2. Create a new branch (git checkout -b feature-name).
+3. Make your changes.
+4. Commit your changes (git commit -m 'Add feature').
+5. Push to your branch (git push origin feature-name).
+6. Submit a pull request.
+
+## License
+The content of this project is licensed under the MIT license Copyright (c) 2024.
+
