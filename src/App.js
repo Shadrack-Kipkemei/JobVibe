@@ -6,7 +6,7 @@ import About from './components/About';
 import Home from './components/Home';
 import SignupForm from './components/SignupForm/SignupForm';  
 import LoginForm from './components/LoginForm/LoginForm'; 
-import Jobs from './components/Jobs';  // Import the Jobs component
+import Jobs from './components/Jobs';  
 
 function App() {
   const [showLoginForm, setShowLoginForm] = useState(false);
@@ -84,7 +84,7 @@ function App() {
         setJobs={setJobs} 
       />}
       
-      {/* Render other sections */}
+     
      
       
       <Contact />
